@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		4DB78011214A35820045F988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB78010214A35820045F988 /* AppDelegate.swift */; };
-		4DB78013214A35830045F988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB78012214A35830045F988 /* ViewController.swift */; };
+		4DB78013214A35830045F988 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB78012214A35830045F988 /* WeatherVC.swift */; };
 		4DB78016214A35830045F988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB78014214A35830045F988 /* Main.storyboard */; };
 		4DB78018214A35840045F988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB78017214A35840045F988 /* Assets.xcassets */; };
 		4DB7801B214A35840045F988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB78019214A35840045F988 /* LaunchScreen.storyboard */; };
+		4DB78023214A37CE0045F988 /* RestaurantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB78022214A37CE0045F988 /* RestaurantsCell.swift */; };
+		4DB78025214A37E90045F988 /* RestaurantsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB78024214A37E90045F988 /* RestaurantsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4DB7800D214A35820045F988 /* cc-demoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cc-demoApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB78010214A35820045F988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DB78012214A35830045F988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4DB78012214A35830045F988 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		4DB78015214A35830045F988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DB78017214A35840045F988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB7801A214A35840045F988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DB7801C214A35840045F988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB78022214A37CE0045F988 /* RestaurantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsCell.swift; sourceTree = "<group>"; };
+		4DB78024214A37E90045F988 /* RestaurantsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				4DB78010214A35820045F988 /* AppDelegate.swift */,
-				4DB78012214A35830045F988 /* ViewController.swift */,
+				4DB78012214A35830045F988 /* WeatherVC.swift */,
 				4DB78014214A35830045F988 /* Main.storyboard */,
 				4DB78017214A35840045F988 /* Assets.xcassets */,
 				4DB78019214A35840045F988 /* LaunchScreen.storyboard */,
 				4DB7801C214A35840045F988 /* Info.plist */,
+				4DB78022214A37CE0045F988 /* RestaurantsCell.swift */,
+				4DB78024214A37E90045F988 /* RestaurantsVC.swift */,
 			);
 			path = "cc-demoApp";
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DB78013214A35830045F988 /* ViewController.swift in Sources */,
+				4DB78013214A35830045F988 /* WeatherVC.swift in Sources */,
+				4DB78023214A37CE0045F988 /* RestaurantsCell.swift in Sources */,
 				4DB78011214A35820045F988 /* AppDelegate.swift in Sources */,
+				4DB78025214A37E90045F988 /* RestaurantsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

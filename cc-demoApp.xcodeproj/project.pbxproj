@@ -14,6 +14,8 @@
 		4DB7801B214A35840045F988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB78019214A35840045F988 /* LaunchScreen.storyboard */; };
 		4DB78023214A37CE0045F988 /* RestaurantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB78022214A37CE0045F988 /* RestaurantsCell.swift */; };
 		4DB78025214A37E90045F988 /* RestaurantsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB78024214A37E90045F988 /* RestaurantsVC.swift */; };
+		4DB78027214A4BBE0045F988 /* CurrentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB78026214A4BBE0045F988 /* CurrentLocation.swift */; };
+		4DB78029214A4BD00045F988 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB78028214A4BCF0045F988 /* AlertService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4DB7801C214A35840045F988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB78022214A37CE0045F988 /* RestaurantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsCell.swift; sourceTree = "<group>"; };
 		4DB78024214A37E90045F988 /* RestaurantsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsVC.swift; sourceTree = "<group>"; };
+		4DB78026214A4BBE0045F988 /* CurrentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocation.swift; sourceTree = "<group>"; };
+		4DB78028214A4BCF0045F988 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,58 @@
 		4DB7800F214A35820045F988 /* cc-demoApp */ = {
 			isa = PBXGroup;
 			children = (
-				4DB78010214A35820045F988 /* AppDelegate.swift */,
-				4DB78012214A35830045F988 /* WeatherVC.swift */,
-				4DB78014214A35830045F988 /* Main.storyboard */,
-				4DB78017214A35840045F988 /* Assets.xcassets */,
-				4DB78019214A35840045F988 /* LaunchScreen.storyboard */,
-				4DB7801C214A35840045F988 /* Info.plist */,
-				4DB78022214A37CE0045F988 /* RestaurantsCell.swift */,
-				4DB78024214A37E90045F988 /* RestaurantsVC.swift */,
+				4DB7802E214A4FD50045F988 /* Controllers */,
+				4DB7802D214A4FC70045F988 /* Cells */,
+				4DB7802C214A4F9B0045F988 /* Model */,
+				4DB7802B214A4F830045F988 /* Storyboards */,
+				4DB7802A214A4F6B0045F988 /* Supporting Files */,
 			);
 			path = "cc-demoApp";
+			sourceTree = "<group>";
+		};
+		4DB7802A214A4F6B0045F988 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DB78010214A35820045F988 /* AppDelegate.swift */,
+				4DB78017214A35840045F988 /* Assets.xcassets */,
+				4DB7801C214A35840045F988 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DB7802B214A4F830045F988 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4DB78014214A35830045F988 /* Main.storyboard */,
+				4DB78019214A35840045F988 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4DB7802C214A4F9B0045F988 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DB78026214A4BBE0045F988 /* CurrentLocation.swift */,
+				4DB78028214A4BCF0045F988 /* AlertService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4DB7802D214A4FC70045F988 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4DB78022214A37CE0045F988 /* RestaurantsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4DB7802E214A4FD50045F988 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DB78012214A35830045F988 /* WeatherVC.swift */,
+				4DB78024214A37E90045F988 /* RestaurantsVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +190,8 @@
 				4DB78013214A35830045F988 /* WeatherVC.swift in Sources */,
 				4DB78023214A37CE0045F988 /* RestaurantsCell.swift in Sources */,
 				4DB78011214A35820045F988 /* AppDelegate.swift in Sources */,
+				4DB78027214A4BBE0045F988 /* CurrentLocation.swift in Sources */,
+				4DB78029214A4BD00045F988 /* AlertService.swift in Sources */,
 				4DB78025214A37E90045F988 /* RestaurantsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +338,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UNVR74NZ7C;
-				INFOPLIST_FILE = "cc-demoApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/cc-demoApp/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mk.cc-demoApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,7 +357,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UNVR74NZ7C;
-				INFOPLIST_FILE = "cc-demoApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/cc-demoApp/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mk.cc-demoApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

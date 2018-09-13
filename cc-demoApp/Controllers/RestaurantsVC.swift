@@ -10,7 +10,12 @@ import UIKit
 
 class RestaurantsVC: UIViewController {
 
+    // MARK:- IBOutlets
+    
     @IBOutlet weak var restaurantsTableView: UITableView!
+    
+    
+    // MARK:- Viewcontroller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +23,9 @@ class RestaurantsVC: UIViewController {
         restaurantsTableView.delegate = self
         restaurantsTableView.dataSource = self
     }
+    
+    
+    // MARK:- IBActions
 
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true)
@@ -26,13 +34,23 @@ class RestaurantsVC: UIViewController {
 
 extension RestaurantsVC: UITableViewDelegate, UITableViewDataSource {
     
+    // MARK:- Tableview Datasource Functions
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = restaurantsTableView.dequeueReusableCell(withIdentifier: "RestaurantsCell", for: indexPath) as! RestaurantsCell
+        guard let cell = restaurantsTableView.dequeueReusableCell(withIdentifier: RestaurantsCell.identifier, for: indexPath) as? RestaurantsCell else { return UITableViewCell() }
+        
         return cell
+    }
+    
+    
+    // MARK:- Tableview Delegate Functions
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
     }
 }

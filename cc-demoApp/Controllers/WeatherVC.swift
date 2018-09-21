@@ -13,6 +13,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
 
     // MARK:- Variables / Constants
     
+    private var weather: Weather?
     private let restaurantsVCSegue = "showRestaurantsVC"
     private var locationManager: CLLocationManager!
     private var currentLocation: CurrentLocation!
@@ -704,6 +705,14 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
         middleStackView.addArrangedSubview(windStackView)
     }
     
+    private func loadUI() {
+        
+        if let weather = weather {
+            
+            
+        }
+    }
+    
     
     // MARK:- Current Location Functions
 
@@ -744,11 +753,12 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
                     if let place = placemark?.last {
                         if let city = place.locality {
                             self?.currentLocation = CurrentLocation(lat, lng, city)
-                            self?.locationManager.stopUpdatingLocation()
+                            self?.getWeatherData(city)
                         }
                     }
                 }
             }
+            locationManager.stopUpdatingLocation()
         }
     }
     
@@ -757,6 +767,20 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
             AlertService.shared.locationAlert(in: self)
             locationService()
         }
+    }
+    
+    
+    // MARK:- Get Weather Data Functions
+    
+    private func getWeatherData(_ city: String) {
+        WeatherAPIService.shared.getWeatherData(city, completion: { [weak self] (weather, error) in
+            if let err = error {
+                print("Error : ", err)
+            } else {
+                print("Weather Data : ", weather!)
+                self?.weather = weather
+            }
+        })
     }
     
     

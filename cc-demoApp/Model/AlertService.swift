@@ -1,6 +1,6 @@
 //
 //  AlertService.swift
-//  ccdemoapp
+//  cc-demoapp
 //
 //  Created by Muhammad Khan on 09/09/2018.
 //  Copyright © 2018 Muhammad Khan. All rights reserved.

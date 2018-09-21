@@ -14,6 +14,7 @@ final class CurrentLocation {
     
     private var _lat: Double
     private var _lng: Double
+    private var _city: String
     
     
     // MARK:- Getter Setter for Current Class
@@ -36,12 +37,22 @@ final class CurrentLocation {
         }
     }
     
+    var city: String {
+        get {
+            return _city
+        }
+        set {
+            _city = newValue
+        }
+    }
+    
     
     // MARK:- Initializer for current class
     
-    init(_ lat: Double, _ lng: Double) {
+    init(_ lat: Double, _ lng: Double, _ city: String) {
         self._lat = lat
         self._lng = lng
+        self._city = city
     }
 }
 

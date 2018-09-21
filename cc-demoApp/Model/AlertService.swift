@@ -15,7 +15,7 @@ struct AlertService {
     static let shared = AlertService()
     
     func locationAlert(in vc: UIViewController) {
-        let alert = UIAlertController(title: nil, message: "We would like to access your current location in order to deliver with best possible services", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: "We want to access your current location to show weather and nearby restaurants", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
         }))

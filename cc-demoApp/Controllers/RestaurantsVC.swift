@@ -51,6 +51,6 @@ extension RestaurantsVC: UITableViewDelegate, UITableViewDataSource {
     // MARK:- Tableview Delegate Functions
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        return 140 // It will return a static height, you can play with like view.bounds.size.height / 5 or 6 or 7 depending upon UI need //
     }
 }

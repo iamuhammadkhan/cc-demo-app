@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import SVProgressHUD
 
 class WeatherVC: UIViewController, CLLocationManagerDelegate {
 
@@ -37,7 +38,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let cityLabel: UILabel = {
         let label = UILabel()
-        label.text = "Karachi"
+        label.text = ""
         label.textAlignment = .left
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Bold", size: 30)
@@ -47,7 +48,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let dayLabel: UILabel = {
         let label = UILabel()
-        label.text = "Sunday"
+        label.text = ""
         label.textAlignment = .left
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Medium", size: 22)
@@ -57,7 +58,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let weatherMessageLabel: UILabel = {
         let label = UILabel()
-        label.text = "Clear with periodic clouds"
+        label.text = ""
         label.textAlignment = .left
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Medium", size: 15)
@@ -87,7 +88,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let tempratureLabel: UILabel = {
         let label = UILabel()
-        label.text = "37"
+        label.text = ""
         label.textAlignment = .right
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Medium", size: 80)
@@ -107,7 +108,6 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let weatherImage: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "partialy-cloudy")
         iv.contentMode = .scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
@@ -141,9 +141,10 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day1DateLbl: UILabel = {
         let label = UILabel()
-        label.text = "MON"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.numberOfLines = 2
         label.font = UIFont(name: "AvenirNext-Medium", size: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -151,7 +152,6 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day1WeatherImage: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "sunny")
         iv.contentMode = .scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
@@ -159,7 +159,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day1TempratureLbl: UILabel = {
         let label = UILabel()
-        label.text = "37 / 26"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Medium", size: 11)
@@ -178,9 +178,10 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day2DateLbl: UILabel = {
         let label = UILabel()
-        label.text = "TUE"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.numberOfLines = 2
         label.font = UIFont(name: "AvenirNext-Medium", size: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -188,7 +189,6 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day2WeatherImage: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "sunny")
         iv.contentMode = .scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
@@ -196,7 +196,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day2TempratureLbl: UILabel = {
         let label = UILabel()
-        label.text = "37 / 26"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Medium", size: 11)
@@ -215,9 +215,10 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day3DateLbl: UILabel = {
         let label = UILabel()
-        label.text = "WED"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.numberOfLines = 2
         label.font = UIFont(name: "AvenirNext-Medium", size: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -225,7 +226,6 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day3WeatherImage: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "sunny")
         iv.contentMode = .scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
@@ -233,7 +233,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day3TempratureLbl: UILabel = {
         let label = UILabel()
-        label.text = "37 / 26"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Medium", size: 11)
@@ -252,9 +252,10 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day4DateLbl: UILabel = {
         let label = UILabel()
-        label.text = "THU"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.numberOfLines = 2
         label.font = UIFont(name: "AvenirNext-Medium", size: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -262,7 +263,6 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day4WeatherImage: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "sunny")
         iv.contentMode = .scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
@@ -270,7 +270,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day4TempratureLbl: UILabel = {
         let label = UILabel()
-        label.text = "37 / 26"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Medium", size: 11)
@@ -289,9 +289,10 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day5DateLbl: UILabel = {
         let label = UILabel()
-        label.text = "FRI"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.numberOfLines = 2
         label.font = UIFont(name: "AvenirNext-Medium", size: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -299,7 +300,6 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day5WeatherImage: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "sunny")
         iv.contentMode = .scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
@@ -307,7 +307,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day5TempratureLbl: UILabel = {
         let label = UILabel()
-        label.text = "37 / 26"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Medium", size: 11)
@@ -326,9 +326,10 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day6DateLbl: UILabel = {
         let label = UILabel()
-        label.text = "SAT"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.numberOfLines = 2
         label.font = UIFont(name: "AvenirNext-Medium", size: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -336,7 +337,6 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day6WeatherImage: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "sunny")
         iv.contentMode = .scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
@@ -344,7 +344,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day6TempratureLbl: UILabel = {
         let label = UILabel()
-        label.text = "37 / 26"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Medium", size: 11)
@@ -363,9 +363,10 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day7DateLbl: UILabel = {
         let label = UILabel()
-        label.text = "SUN"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.numberOfLines = 2
         label.font = UIFont(name: "AvenirNext-Medium", size: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -373,7 +374,6 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day7WeatherImage: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "sunny")
         iv.contentMode = .scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
@@ -381,7 +381,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let day7TempratureLbl: UILabel = {
         let label = UILabel()
-        label.text = "37 / 26"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Medium", size: 11)
@@ -461,7 +461,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let humidityValueLbl: UILabel = {
         let label = UILabel()
-        label.text = "65"
+        label.text = "0"
         label.textAlignment = .right
         label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Medium", size: 18)
@@ -511,7 +511,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     private let windValueLbl: UILabel = {
         let label = UILabel()
-        label.text = "12"
+        label.text = "0"
         label.textAlignment = .right
         label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         label.font = UIFont(name: "AvenirNext-Medium", size: 18)
@@ -562,6 +562,8 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     // MARK:- View Setup Functions
 
     private func setupViews() {
+        
+        SVProgressHUD.show()
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -709,7 +711,61 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
         
         if let weather = weather {
             
+            cityLabel.text = weather.location.name
             
+            let date = Date()
+            let formatter = DateFormatter()
+            let weekday = Calendar.current.component(.weekday, from: date) - 1
+          
+            dayLabel.text = formatter.weekdaySymbols[weekday]
+            
+            weatherMessageLabel.text = weather.current.condition.text
+            
+            weatherImage.setMediumWeatherImageWithUrl(url: weather.current.condition.icon)
+            
+            tempratureLabel.text = "\(weather.current.tempC)"
+            
+            precipitationValueLbl.text = "\(weather.current.precipIn)"
+            
+            humidityValueLbl.text = "\(weather.current.humidity)"
+            
+            windValueLbl.text = "\(Int(weather.current.windKph))"
+            
+            let day1 = weather.forecast.forecastday[0]
+            let day2 = weather.forecast.forecastday[1]
+            let day3 = weather.forecast.forecastday[2]
+            let day4 = weather.forecast.forecastday[3]
+            let day5 = weather.forecast.forecastday[4]
+            let day6 = weather.forecast.forecastday[5]
+            let day7 = weather.forecast.forecastday[6]
+            
+            day1DateLbl.text = day1.date
+            day1WeatherImage.setSmallWeatherImageWithUrl(url: day1.day.condition.icon)
+            day1TempratureLbl.text = "\(Int(day1.day.maxtempC)) / \(Int(day1.day.mintempC))"
+            
+            day2DateLbl.text = day2.date
+            day2WeatherImage.setSmallWeatherImageWithUrl(url: day2.day.condition.icon)
+            day2TempratureLbl.text = "\(Int(day2.day.maxtempC)) / \(Int(day2.day.mintempC))"
+            
+            day3DateLbl.text = day3.date
+            day3WeatherImage.setSmallWeatherImageWithUrl(url: day3.day.condition.icon)
+            day3TempratureLbl.text = "\(Int(day3.day.maxtempC)) / \(Int(day3.day.mintempC))"
+            
+            day4DateLbl.text = day4.date
+            day4WeatherImage.setSmallWeatherImageWithUrl(url: day4.day.condition.icon)
+            day4TempratureLbl.text = "\(Int(day4.day.maxtempC)) / \(Int(day4.day.mintempC))"
+            
+            day5DateLbl.text = day5.date
+            day5WeatherImage.setSmallWeatherImageWithUrl(url: day5.day.condition.icon)
+            day5TempratureLbl.text = "\(Int(day5.day.maxtempC)) / \(Int(day5.day.mintempC))"
+            
+            day6DateLbl.text = day6.date
+            day6WeatherImage.setSmallWeatherImageWithUrl(url: day6.day.condition.icon)
+            day6TempratureLbl.text = "\(Int(day6.day.maxtempC)) / \(Int(day6.day.mintempC))"
+            
+            day7DateLbl.text = day7.date
+            day7WeatherImage.setSmallWeatherImageWithUrl(url: day7.day.condition.icon)
+            day7TempratureLbl.text = "\(Int(day7.day.maxtempC)) / \(Int(day7.day.mintempC))"
         }
     }
     
@@ -749,11 +805,13 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
             geocoder.reverseGeocodeLocation(location) { [weak self] (placemark, error) in
                 if let err = error {
                     print("Error : ", err)
+                    SVProgressHUD.dismiss()
                 } else {
                     if let place = placemark?.last {
                         if let city = place.locality {
                             self?.currentLocation = CurrentLocation(lat, lng, city)
                             self?.getWeatherData(city)
+                            SVProgressHUD.dismiss()
                         }
                     }
                 }
@@ -779,6 +837,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
             } else {
                 print("Weather Data : ", weather!)
                 self?.weather = weather
+                self?.loadUI()
             }
         })
     }
